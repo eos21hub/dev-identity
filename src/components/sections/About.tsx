@@ -32,18 +32,12 @@ export function About() {
             <div className="relative">
               <div className="absolute -top-3 -left-3 w-16 h-16 bg-primary-600 rounded-2xl opacity-10" />
               <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-emerald-500 rounded-2xl opacity-8" />
-              <div className="relative w-full aspect-[4/5] rounded-3xl bg-gradient-to-br
-                from-blue-50 via-blue-100 to-emerald-50 border border-gray-200
-                overflow-hidden flex items-center justify-center">
-                {/* Replace contents with: <img src="/photo.jpg" alt="Emmanuel" className="w-full h-full object-cover" /> */}
-                <div className="flex flex-col items-center gap-3 text-center px-8">
-                  <div className="w-20 h-20 rounded-full bg-blue-200 flex items-center justify-center">
-                    <svg className="text-blue-400 w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-                    </svg>
-                  </div>
-                  <p className="text-xs text-blue-400 font-medium">Replace with your photo</p>
-                </div>
+              <div className="relative w-full aspect-[4/5] rounded-3xl border border-gray-200 overflow-hidden">
+                <img
+                  src="/image2.png"
+                  alt="Emmanuel Oppong-Sarpong"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </motion.div>

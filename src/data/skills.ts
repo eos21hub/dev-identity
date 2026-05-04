@@ -13,7 +13,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'Frontend Web',
     iconBg: 'bg-emerald-50',
     iconColor: 'text-emerald-600',
-    skills: ['React', 'Next.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript'],
+    skills: ['React', 'Next.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript', 'Framer', ' WordPress'],
   },
   {
     id: 'backend',

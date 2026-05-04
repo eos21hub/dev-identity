@@ -105,18 +105,12 @@ export function Hero() {
           >
             <div className="relative">
               {/* Avatar card */}
-              <div className="w-[300px] h-[380px] rounded-3xl bg-gradient-to-br from-blue-100 to-blue-200
-                border-2 border-white shadow-card-xl overflow-hidden flex items-center justify-center">
-                {/* Replace this div with <img src="/photo.jpg" alt="..." className="w-full h-full object-cover" /> */}
-                <div className="flex flex-col items-center gap-3 text-center px-6">
-                  <div className="w-20 h-20 rounded-full bg-blue-200 flex items-center justify-center">
-                    <svg className="text-blue-400 w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-blue-400 font-medium">Add your photo here</p>
-                  <p className="text-xs text-blue-300">Replace with {'<img src="/photo.jpg">'}</p>
-                </div>
+              <div className="w-[300px] h-[380px] rounded-3xl border-2 border-white shadow-card-xl overflow-hidden">
+                <img
+                  src="/image1.png"
+                  alt="Emmanuel Oppong-Sarpong"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Stat card 1 */}

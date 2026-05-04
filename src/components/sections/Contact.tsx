@@ -154,7 +154,7 @@ export function Contact() {
                     placeholder="Your name"
                     className="w-full px-4 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 rounded-xl
                       outline-none transition-all duration-200
-                      focus:border-primary-400 focus:ring-3 focus:ring-primary-100
+                      focus:border-primary-400 focus:ring-2 focus:ring-primary-100
                       placeholder:text-gray-300"
                   />
                 </div>
@@ -171,7 +171,7 @@ export function Contact() {
                     placeholder="me@gmail.com"
                     className="w-full px-4 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 rounded-xl
                       outline-none transition-all duration-200
-                      focus:border-primary-400 focus:ring-3 focus:ring-primary-100
+                      focus:border-primary-400 focus:ring-2 focus:ring-primary-100
                       placeholder:text-gray-300"
                   />
                 </div>
@@ -186,7 +186,7 @@ export function Contact() {
                   placeholder="Project inquiry, freelance work…"
                   className="w-full px-4 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 rounded-xl
                     outline-none transition-all duration-200
-                    focus:border-primary-400 focus:ring-3 focus:ring-primary-100
+                    focus:border-primary-400 focus:ring-2 focus:ring-primary-100
                     placeholder:text-gray-300"
                 />
               </div>
@@ -203,7 +203,7 @@ export function Contact() {
                   placeholder="Tell me about your project or what you'd like to discuss…"
                   className="w-full px-4 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 rounded-xl
                     outline-none transition-all duration-200 resize-y
-                    focus:border-primary-400 focus:ring-3 focus:ring-primary-100
+                    focus:border-primary-400 focus:ring-2 focus:ring-primary-100
                     placeholder:text-gray-300"
                 />
               </div>

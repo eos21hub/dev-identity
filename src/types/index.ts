@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 export interface Project {
   id: string
   title: string
@@ -37,5 +39,5 @@ export interface NavLink {
 export interface SocialLink {
   label: string
   href: string
-  icon: React.ReactNode
+  icon: ReactNode
 }
