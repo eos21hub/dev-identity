@@ -10,7 +10,7 @@ export const projects: Project[] = [
     accentColor: '#3B82F6',
     bgGradient: 'from-blue-50 to-blue-100',
     strokeColor: '#3B82F6',
-    links: { demo: '#', github: '#' },
+    links: { demo: 'https://hivemedix.com', github: '#' },
   },
   {
     id: 'agrolink',
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     accentColor: '#10B981',
     bgGradient: 'from-emerald-50 to-emerald-100',
     strokeColor: '#10B981',
-    links: { demo: '#', github: '#' },
+    links: { demo: 'https://agrolink-pearl.vercel.app ', github: 'https://github.com/eos21hub/agrolink' },
   },
   {
     id: 'Ghana-emergency-response',
@@ -57,14 +57,14 @@ export const projects: Project[] = [
     links: { demo: '#', github: '#' },
   },
   {
-    id: 'holocron-invoice',
-    title: 'Holocron Labs — Invoice Template System',
+    id: 'opticash',
+    title: 'Opticash — Digital Payments Platform',
     description:
-      'A polished, production-ready invoice generation system built for Holocron Labs as a freelance engagement. Features dynamic data binding, branded PDF export, line-item calculations with tax handling, multi-currency support, and a clean print stylesheet — delivered as a reusable React component library.',
-    tags: ['React', 'TypeScript', 'PDF Export', 'Freelance'],
-    accentColor: '#7C3AED',
-    bgGradient: 'from-violet-50 to-violet-100',
-    strokeColor: '#7C3AED',
+      'A fintech platform built to simplify digital payments and money management for individuals and businesses across Africa. Features instant peer-to-peer transfers, multi-wallet management, transaction history with smart analytics, bill payments, and mobile money integrations — engineered for speed and reliability at scale.',
+    tags: ['Flutter', 'Node.js', 'Fintech', 'Mobile Money'],
+    accentColor: '#0EA5E9',
+    bgGradient: 'from-sky-50 to-sky-100',
+    strokeColor: '#0EA5E9',
     links: { demo: '#', github: '#' },
   },
 ]

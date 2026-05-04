@@ -1,7 +1,9 @@
+import { useState, useCallback, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { ProjectTag } from '@/components/ui/Badge'
+import { Toast } from '@/components/ui/Toast'
 import { projects } from '@/data/projects'
 import type { Project } from '@/types'
 
@@ -312,65 +314,80 @@ function WificombatThumb() {
   )
 }
 
-function HolocronThumb() {
+function OpticashThumb() {
   return (
     <svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" aria-hidden>
       <defs>
-        <linearGradient id="hl-bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#0d0119" />
-          <stop offset="100%" stopColor="#1a0533" />
+        <linearGradient id="oc-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#020c1b" />
+          <stop offset="100%" stopColor="#041830" />
         </linearGradient>
-        <linearGradient id="hl-glow" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.22" />
-          <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
+        <linearGradient id="oc-card" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#0369a1" />
+          <stop offset="100%" stopColor="#0284c7" />
         </linearGradient>
-        <radialGradient id="hl-center" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.2" />
-          <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
+        <radialGradient id="oc-glow" cx="50%" cy="40%" r="55%">
+          <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
         </radialGradient>
-        <pattern id="hl-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-          <circle cx="1.5" cy="1.5" r="0.8" fill="#2e1065" />
+        <pattern id="oc-dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="1.5" cy="1.5" r="0.8" fill="#082f49" />
         </pattern>
       </defs>
 
-      <rect width="400" height="210" fill="url(#hl-bg)" />
-      <rect width="400" height="210" fill="url(#hl-dots)" opacity="0.7" />
-      <circle cx="200" cy="105" r="90" fill="url(#hl-center)" />
+      <rect width="400" height="210" fill="url(#oc-bg)" />
+      <rect width="400" height="210" fill="url(#oc-dots)" opacity="0.6" />
+      <rect width="400" height="210" fill="url(#oc-glow)" />
 
-      {/* Holocron cube (stylised Star Wars holocron shape) */}
-      {/* Bottom face */}
-      <path d="M200 130 L230 113 L200 96 L170 113 Z" fill="#3b0764" stroke="#7c3aed" strokeWidth="1" />
-      {/* Right face */}
-      <path d="M230 113 L230 82 L200 65 L200 96 Z" fill="#4c0d8a" stroke="#7c3aed" strokeWidth="1" />
-      {/* Left face */}
-      <path d="M170 113 L200 96 L200 65 L170 82 Z" fill="#2e0659" stroke="#7c3aed" strokeWidth="1" />
-      {/* Top face */}
-      <path d="M170 82 L200 65 L230 82 L200 99 Z" fill="#5b21b6" stroke="#a78bfa" strokeWidth="1" />
-      {/* Center glow dot */}
-      <circle cx="200" cy="90" r="4" fill="#a78bfa" opacity="0.9" />
-      {/* Orbital ring */}
-      <ellipse cx="200" cy="97" rx="38" ry="14" fill="none" stroke="#7c3aed" strokeWidth="0.8" opacity="0.5" strokeDasharray="3 3" />
+      {/* Top bar */}
+      <rect x="20" y="14" width="360" height="28" rx="8" fill="#041e38" stroke="#0c3659" strokeWidth="1" />
+      <circle cx="34" cy="28" r="5" fill="#0ea5e9" opacity="0.9" />
+      <text x="46" y="32" fill="#bae6fd" fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">Opticash</text>
+      <rect x="302" y="20" width="68" height="16" rx="6" fill="#0c4a6e" />
+      <text x="336" y="31" fill="#7dd3fc" fontSize="8" fontFamily="Inter,sans-serif" textAnchor="middle" fontWeight="600">Wallet</text>
 
-      {/* Branding */}
-      <text x="200" y="148" fill="#a78bfa" fontSize="13" fontWeight="800" fontFamily="Inter,sans-serif" textAnchor="middle" letterSpacing="2">HOLOCRON LABS</text>
-      <text x="200" y="162" fill="#7c3aed" fontSize="8" fontFamily="Inter,sans-serif" textAnchor="middle" letterSpacing="1">INVOICE TEMPLATE SYSTEM</text>
+      {/* Debit card */}
+      <rect x="20" y="54" width="190" height="108" rx="12" fill="url(#oc-card)" />
+      {/* Chip */}
+      <rect x="36" y="72" width="22" height="17" rx="3" fill="#f0c040" opacity="0.85" />
+      <line x1="47" y1="72" x2="47" y2="89" stroke="#c8990a" strokeWidth="0.8" opacity="0.6" />
+      <line x1="36" y1="80" x2="58" y2="80" stroke="#c8990a" strokeWidth="0.8" opacity="0.6" />
+      {/* Card number */}
+      <text x="36" y="114" fill="white" fontSize="8.5" fontFamily="Inter,sans-serif" letterSpacing="2" opacity="0.85">•••• •••• •••• 4821</text>
+      {/* Cardholder */}
+      <text x="36" y="130" fill="white" fontSize="8" fontFamily="Inter,sans-serif" opacity="0.7">EMMANUEL O.</text>
+      <text x="170" y="130" fill="white" fontSize="8" fontFamily="Inter,sans-serif" textAnchor="end" opacity="0.7">07/27</text>
+      {/* Contactless icon */}
+      <path d="M183 68 C 186 71 186 76 183 79" stroke="white" strokeWidth="1.4" fill="none" opacity="0.7" strokeLinecap="round" />
+      <path d="M186 65 C 191 70 191 77 186 82" stroke="white" strokeWidth="1.4" fill="none" opacity="0.5" strokeLinecap="round" />
+      <circle cx="180" cy="73.5" r="2" fill="white" opacity="0.8" />
 
-      {/* Document preview strip */}
-      <rect x="44" y="170" width="312" height="28" rx="8" fill="#1a0533" stroke="#3b0764" strokeWidth="1" />
-      {/* Doc icon */}
-      <rect x="58" y="177" width="10" height="13" rx="1.5" fill="#4c0d8a" stroke="#7c3aed" strokeWidth="0.8" />
-      <rect x="60" y="181" width="6" height="1.2" rx="0.6" fill="#a78bfa" opacity="0.7" />
-      <rect x="60" y="184" width="4" height="1.2" rx="0.6" fill="#a78bfa" opacity="0.5" />
-      <text x="76" y="188" fill="#94a3b8" fontSize="8.5" fontFamily="Inter,sans-serif">invoice_template_v2.tsx</text>
-      <rect x="278" y="176" width="64" height="16" rx="5" fill="#3b1a7a" />
-      <text x="310" y="187" fill="#c4b5fd" fontSize="8" fontFamily="Inter,sans-serif" textAnchor="middle" fontWeight="600">PDF Export</text>
+      {/* Right panel: stats */}
+      <rect x="224" y="54" width="156" height="48" rx="8" fill="#041e38" stroke="#0c3659" strokeWidth="1" />
+      <text x="238" y="70" fill="#64748b" fontSize="7" fontFamily="Inter,sans-serif" letterSpacing="0.5">BALANCE</text>
+      <text x="238" y="88" fill="#e2e8f0" fontSize="18" fontWeight="800" fontFamily="Inter,sans-serif">GH₵ 4,820</text>
 
-      {/* Top branding bar */}
-      <rect x="20" y="14" width="360" height="28" rx="8" fill="#13012b" stroke="#3b0764" strokeWidth="1" />
-      <circle cx="34" cy="28" r="5" fill="#7c3aed" opacity="0.8" />
-      <text x="46" y="32" fill="#c4b5fd" fontSize="10" fontWeight="600" fontFamily="Inter,sans-serif">Freelance · Holocron Labs</text>
-      <rect x="302" y="20" width="68" height="16" rx="6" fill="#3b0764" />
-      <text x="336" y="31" fill="#a78bfa" fontSize="8" fontFamily="Inter,sans-serif" textAnchor="middle">v2.0 Shipped</text>
+      <rect x="224" y="114" width="72" height="48" rx="8" fill="#041e38" stroke="#0c3659" strokeWidth="1" />
+      <text x="238" y="130" fill="#64748b" fontSize="7" fontFamily="Inter,sans-serif" letterSpacing="0.4">SENT</text>
+      <text x="238" y="148" fill="#f87171" fontSize="13" fontWeight="700" fontFamily="Inter,sans-serif">−840</text>
+
+      <rect x="308" y="114" width="72" height="48" rx="8" fill="#041e38" stroke="#0c3659" strokeWidth="1" />
+      <text x="322" y="130" fill="#64748b" fontSize="7" fontFamily="Inter,sans-serif" letterSpacing="0.4">RECEIVED</text>
+      <text x="322" y="148" fill="#34d399" fontSize="13" fontWeight="700" fontFamily="Inter,sans-serif">+2,100</text>
+
+      {/* Recent transactions */}
+      <text x="20" y="178" fill="#64748b" fontSize="7.5" fontFamily="Inter,sans-serif" letterSpacing="0.4">RECENT TRANSACTIONS</text>
+      {[
+        { x: 20,  label: 'MTN MoMo',   amt: '+GH₵ 500', color: '#34d399' },
+        { x: 140, label: 'Electricity', amt: '−GH₵ 120', color: '#f87171' },
+        { x: 265, label: 'P2P Send',   amt: '−GH₵ 200', color: '#f87171' },
+      ].map(({ x, label, amt, color }) => (
+        <g key={x}>
+          <rect x={x} y="182" width="108" height="18" rx="5" fill="#041e38" stroke="#0c3659" strokeWidth="0.8" />
+          <text x={x + 10} y="194" fill="#94a3b8" fontSize="7" fontFamily="Inter,sans-serif">{label}</text>
+          <text x={x + 98} y="194" fill={color} fontSize="7" fontFamily="Inter,sans-serif" textAnchor="end" fontWeight="600">{amt}</text>
+        </g>
+      ))}
     </svg>
   )
 }
@@ -386,7 +403,7 @@ const THUMBS: Record<string, () => JSX.Element> = {
   'Ghana-emergency-response': EmergencyThumb,
   'invoice-web':             InvoiceWebThumb,
   'wificombat-elearning':    WificombatThumb,
-  'holocron-invoice':        HolocronThumb,
+  'opticash':                OpticashThumb,
 }
 
 function Fallback() {
@@ -415,8 +432,22 @@ const cardAnim = {
    PROJECT CARD
    ══════════════════════════════════════════════════════════════ */
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, onToast }: { project: Project; onToast: (msg: string) => void }) {
   const Thumb = THUMBS[project.id] ?? Fallback
+
+  function handleDemo(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (project.links.demo === '#') {
+      e.preventDefault()
+      onToast('Project still under build or unavailable at the moment.')
+    }
+  }
+
+  function handleGithub(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (project.links.github === '#') {
+      e.preventDefault()
+      onToast('This is a private repository.')
+    }
+  }
 
   return (
     <motion.article
@@ -431,7 +462,6 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="w-full h-full transition-transform duration-500 group-hover:scale-[1.03]">
           <Thumb />
         </div>
-        {/* Subtle shimmer on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300
           bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
       </div>
@@ -456,6 +486,9 @@ function ProjectCard({ project }: { project: Project }) {
           {project.links.demo && (
             <a
               href={project.links.demo}
+              onClick={handleDemo}
+              target={project.links.demo !== '#' ? '_blank' : undefined}
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold
                 text-primary-600 border border-primary-200 bg-primary-50
                 hover:bg-primary-600 hover:text-white hover:border-primary-600
@@ -467,6 +500,9 @@ function ProjectCard({ project }: { project: Project }) {
           {project.links.github && (
             <a
               href={project.links.github}
+              onClick={handleGithub}
+              target={project.links.github !== '#' ? '_blank' : undefined}
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold
                 text-gray-600 border border-gray-200 bg-gray-50
                 hover:bg-gray-900 hover:text-white hover:border-gray-900
@@ -486,6 +522,20 @@ function ProjectCard({ project }: { project: Project }) {
    ══════════════════════════════════════════════════════════════ */
 
 export function Projects() {
+  const [toast, setToast] = useState<{ message: string; visible: boolean }>({ message: '', visible: false })
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const showToast = useCallback((message: string) => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    setToast({ message, visible: true })
+    timerRef.current = setTimeout(() => setToast(t => ({ ...t, visible: false })), 5000)
+  }, [])
+
+  const dismissToast = useCallback(() => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    setToast(t => ({ ...t, visible: false }))
+  }, [])
+
   return (
     <section id="projects" className="py-24 bg-gray-50/60">
       <div className="max-w-6xl mx-auto px-6">
@@ -503,10 +553,12 @@ export function Projects() {
           className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.map((p) => (
-            <ProjectCard key={p.id} project={p} />
+            <ProjectCard key={p.id} project={p} onToast={showToast} />
           ))}
         </motion.div>
       </div>
+
+      <Toast message={toast.message} visible={toast.visible} onDismiss={dismissToast} />
     </section>
   )
 }

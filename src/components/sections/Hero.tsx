@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, MessageSquare, Github, Linkedin, Twitter, PenLine, Activity } from 'lucide-react'
+import { ArrowRight, MessageSquare, Github, PenLine, Activity } from 'lucide-react'
 import { LinkButton } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 
@@ -14,9 +14,9 @@ const item = {
 }
 
 const socials = [
-  { label: 'GitHub',   href: 'https://github.com/',   Icon: Github },
-  { label: 'LinkedIn', href: 'https://linkedin.com/', Icon: Linkedin },
-  { label: 'Twitter',  href: 'https://twitter.com/',  Icon: Twitter },
+  { label: 'GitHub',   href: 'https://github.com/eos21hub',   Icon: Github },
+  // { label: 'LinkedIn', href: 'https://linkedin.com/', Icon: Linkedin },
+  // { label: 'Twitter',  href: 'https://twitter.com/',  Icon: Twitter },
 ]
 
 export function Hero() {
