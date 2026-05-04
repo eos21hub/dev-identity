@@ -10,10 +10,7 @@ export const projects: Project[] = [
     accentColor: '#3B82F6',
     bgGradient: 'from-blue-50 to-blue-100',
     strokeColor: '#3B82F6',
-    links: {
-      demo: '#',
-      github: '#',
-    },
+    links: { demo: '#', github: '#' },
   },
   {
     id: 'agrolink',
@@ -24,10 +21,7 @@ export const projects: Project[] = [
     accentColor: '#10B981',
     bgGradient: 'from-emerald-50 to-emerald-100',
     strokeColor: '#10B981',
-    links: {
-      demo: '#',
-      github: '#',
-    },
+    links: { demo: '#', github: '#' },
   },
   {
     id: 'Ghana-emergency-response',
@@ -38,10 +32,7 @@ export const projects: Project[] = [
     accentColor: '#F43F5E',
     bgGradient: 'from-rose-50 to-rose-100',
     strokeColor: '#F43F5E',
-    links: {
-      demo: '#',
-      github: '#',
-    },
+    links: { demo: '#', github: '#' },
   },
   {
     id: 'invoice-web',
@@ -52,30 +43,28 @@ export const projects: Project[] = [
     accentColor: '#F59E0B',
     bgGradient: 'from-amber-50 to-amber-100',
     strokeColor: '#F59E0B',
-    links: {
-      demo: '#',
-      github: '#',
-    },
+    links: { demo: '#', github: '#' },
   },
   {
-  id: 'wificombat-elearning',
-
-  title: 'Wificombat — Career Pathway E-Learning Platform',
-
-  description:
-    'A scalable, career-driven e-learning platform designed for students aged 5–18, combining structured tech education with entrepreneurship training. Features include AI-powered career pathway assessment, role-based dashboards (students, parents, teachers, admins), live virtual classrooms, social learning communities, real-time performance analytics, and subscription-based access. Built to support both individual learners and school-wide adoption with multi-language support and integrated payment systems.',
-
-  tags: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'SaaS', 'EdTech'],
-
-  accentColor: '#6366F1',
-
-  bgGradient: 'from-indigo-50 to-indigo-100',
-
-  strokeColor: '#6366F1',
-
-  links: {
-    demo: '#',
-    github: '#',
+    id: 'wificombat-elearning',
+    title: 'Wificombat — Career Pathway E-Learning Platform',
+    description:
+      'A scalable, career-driven e-learning platform for students aged 5–18, combining structured tech education with entrepreneurship training. Features AI-powered career pathway assessment, role-based dashboards, live virtual classrooms, social learning communities, real-time analytics, and subscription-based access.',
+    tags: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'EdTech'],
+    accentColor: '#6366F1',
+    bgGradient: 'from-indigo-50 to-indigo-100',
+    strokeColor: '#6366F1',
+    links: { demo: '#', github: '#' },
   },
-}
+  {
+    id: 'holocron-invoice',
+    title: 'Holocron Labs — Invoice Template System',
+    description:
+      'A polished, production-ready invoice generation system built for Holocron Labs as a freelance engagement. Features dynamic data binding, branded PDF export, line-item calculations with tax handling, multi-currency support, and a clean print stylesheet — delivered as a reusable React component library.',
+    tags: ['React', 'TypeScript', 'PDF Export', 'Freelance'],
+    accentColor: '#7C3AED',
+    bgGradient: 'from-violet-50 to-violet-100',
+    strokeColor: '#7C3AED',
+    links: { demo: '#', github: '#' },
+  },
 ]

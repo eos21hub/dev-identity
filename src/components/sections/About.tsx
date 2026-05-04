@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 
 const stats = [
-  { value: '15+', label: 'Projects Shipped' },
+  { value: '5+', label: 'Projects Shipped' },
   { value: '3+',  label: 'Years Experience' },
   { value: '3',   label: 'Companies' },
 ]

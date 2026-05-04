@@ -125,7 +125,7 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-[10px] text-gray-400 font-medium leading-none">Projects Built</p>
-                  <p className="text-base font-bold text-gray-900 mt-0.5">15+</p>
+                  <p className="text-base font-bold text-gray-900 mt-0.5">5+</p>
                 </div>
               </motion.div>
 

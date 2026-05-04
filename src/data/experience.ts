@@ -7,8 +7,8 @@ export const experiences: Experience[] = [
     company: 'KaydTech',
     period: '2025 — Present',
     description:
-      'Lead mobile developer on the KaydTech Emergency Response platform — a life-critical application connecting users to first responders across Ghana. Architected the entire Flutter codebase using BLoC state management, built real-time GPS tracking, offline SOS mode, push notifications, and emergency contact management. Worked closely with backend engineers to design and consume RESTful APIs, shipping the app to production for hundreds of active users.',
-    skills: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'Google Maps SDK', 'REST APIs'],
+      'A backend developer on the Hivemedix platform — a smart digital health solution focused on streamlining patient care, medical data access, and service delivery. Designed and implemented scalable server-side architecture using Node.js, built secure RESTful APIs for handling patient records, authentication, and real-time interactions, and integrated cloud database solutions for reliable data management. Collaborated with frontend and mobile teams to ensure seamless communication between systems while enforcing role-based access control and data security best practices.',
+  skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Authentication', 'RBAC', 'Cloud Deployment'],
   },
   {
     id: 'opticash',
@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     company: 'Opticash',
     period: '2022 — 2023',
     description:
-      'Developed and maintained the Opticash digital wallet — a fintech application enabling payments, peer-to-peer transfers, and financial management for everyday users. Implemented secure transaction flows including biometric authentication and a custom PIN system. Improved overall app performance by ~40% through targeted code splitting, lazy loading, and state optimisation. Shipped weekly releases in an agile team environment.',
+      'Developed and maintained the Opticash digital wallet with the Opticash Dev team — a fintech application enabling payments, peer-to-peer transfers, and financial management for everyday users. Implemented secure transaction flows including biometric authentication and a custom PIN system. Improved overall app performance by ~40% through targeted code splitting, lazy loading, and state optimisation. Shipped weekly releases in an agile team environment.',
     skills: ['Flutter', 'Dart', 'GetX', 'Hive', 'Biometrics', 'Payments API'],
   },
   {
@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     company: 'Independent — Various Clients',
     period: '2021 — Present',
     description:
-      'Delivered end-to-end solutions for clients across healthcare, agriculture, and e-commerce. Built the HiveMedix healthcare ecosystem (Flutter + React + admin dashboard), AgroLink AI agricultural marketplace, and the Invoice Web billing platform. Managed complete project lifecycles — from discovery and requirements through design, development, and deployment — consistently shipping on time and maintaining long-term client relationships.',
-    skills: ['Flutter', 'React', 'Node.js', 'MongoDB', 'Firebase', 'Project Management'],
+      'Delivered end-to-end solutions for clients across healthcare platforms, e-learning platforms, agriculture, Invoicing web app and e-commerce. Built the HiveMedix healthcare ecosystem (Flutter + React + admin dashboard), AgroLink AI agricultural marketplace, and the Invoice Web billing platform. Managed complete project lifecycles — from discovery and requirements through design, development, and deployment — consistently shipping on time and maintaining long-term client relationships.',
+    skills: ['Flutter', 'React', 'Node.js', 'MongoDB', 'Supabase', 'Firebase', 'Project Management'],
   },
 ]
