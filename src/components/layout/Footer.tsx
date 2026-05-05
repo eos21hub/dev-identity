@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from 'lucide-react'
+import { Github } from 'lucide-react'
 
 const socials = [
   { label: 'GitHub',   href: 'https://github.com/eos21hub',    Icon: Github },
