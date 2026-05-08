@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
     id: 'freelance',
     role: 'Freelance Full-Stack Developer',
     company: 'Independent — Various Clients',
-    period: '2021 — Present',
+    period: '2024 — Present',
     description:
       'Delivered end-to-end solutions for clients across healthcare platforms, e-learning platforms, agriculture, Invoicing web app and e-commerce. Together with team built the HiveMedix healthcare ecosystem (Flutter + React + admin dashboard), AgroLink AI agricultural marketplace, the Invoice Web billing platform and Wificombat e-learning platform to scale the career pathway and educational impact largerly. Managed complete project lifecycles — from discovery and requirements through design, development, and deployment — consistently shipping on time and maintaining long-term client relationships.',
     skills: ['Flutter', 'React', 'Node.js', 'MongoDB', 'Supabase', 'Firebase', 'Project Management'],
