@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     id: 'opticash',
     role: 'Web Developer — Fintech',
     company: 'Opticash',
-    period: '2022 — 2023',
+    period: '2024',
     description:
       'Developed and maintained the Opticash digital wallet with the Opticash Dev team — a fintech application enabling payments, peer-to-peer transfers, and financial management for everyday users. Implemented secure transaction flows including biometric authentication and a custom PIN system. Improved overall app performance by ~40% through targeted code splitting, lazy loading, and state optimisation. Shipped weekly releases in an agile team environment.',
     skills: ['Flutter', 'Dart', 'GetX', 'Hive', 'Biometrics', 'Payments API'],
