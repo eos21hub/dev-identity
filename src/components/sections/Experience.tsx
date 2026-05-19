@@ -4,6 +4,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 import { TechTag } from '@/components/ui/Badge'
 import { experiences } from '@/data/experience'
 import type { Experience } from '@/types'
+import { cn } from '@/utils/cn'
 
 const dotIcons = { kaydtech: MapPin, opticash: CreditCard, freelance: Tag }
 
@@ -37,7 +38,7 @@ function TimelineItem({ exp, isLast }: { exp: Experience; isLast: boolean }) {
       <motion.div
         whileHover={{ x: 4, boxShadow: '0 12px 32px rgba(0,0,0,0.09)' }}
         transition={{ type: 'spring', stiffness: 280, damping: 24 }}
-        className="flex-1 bg-white border border-gray-200 rounded-2xl p-6 shadow-card mb-6 last:mb-0"
+        className={cn('flex-1 bg-white border border-gray-200 rounded-2xl p-6 shadow-card', !isLast && 'mb-6')}
       >
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
           <div>
